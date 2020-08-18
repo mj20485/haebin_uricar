@@ -1,0 +1,51 @@
+.map{
+   margin-top: 50px;
+   float: right;
+   margin-right: 6%;
+}
+.s1{
+   height: 900px;
+}
+.reserv{   
+   font-size:23px;   
+}
+
+.all{
+   float: left;
+   margin-top: 50px;
+   margin-left: 6%;
+   border: 1px solid black;
+   padding:130px ;
+   width: 800px;
+   height: 500px;
+   color: #004982;
+}
+
+.search{
+   background-color: #004982;    
+   color: white;
+   font-size:20px; 
+   padding-left: 5px;
+   padding-right: 5px;
+   margin-bottom: 30px;
+   margin-top: 50px;
+   margin-left: 700px;
+    width: 200px;
+}
+
+.search a{
+   color: white;
+   text-decoration: none;
+}
+
+.localSearch{
+   border: 1px solid black;   
+}
+.s2{
+   height: 900px;
+
+}
+#result{
+   font-size: 25px;
+   text-align: center;
+}

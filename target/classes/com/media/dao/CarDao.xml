@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+	
+	
+<mapper namespace="com.media.dao.CarDao">
+
+	<select id="getClist" parameterType="HashMap"
+		resultType="com.media.dto.CarDto">
+		<![CDATA[
+		SELECT * FROM CLIST_1
+		WHERE RONUM >= (${pageNum}*${cnt})-(${cnt}-1)
+			AND RONUM <= ${pageNum}*${cnt}
+		]]>
+		
+		</select>
+		
+		<select id="getCarCount" resultType="Integer">
+			SELECT COUNT(*) FROM CLIST_1
+		</select>
+		
+		<select id="getCarContents" parameterType="Integer"
+			resultType="com.media.dto.CarDto">
+			SELECT * FROM CLIST_1
+			WHERE CAR_SEQ = #{car_seq}	
+			
+		</select>
+
+	
+	<select id="getCarInfo" parameterType="String"
+		resultType="com.media.dto.CarDto">
+		SELECT * FROM CARINFO WHERE CAR_NUM=#{carnum}
+	</select>
+	
+	<insert id="carInsert" parameterType="com.media.dto.CarDto"
+		useGeneratedKeys="true" keyProperty="car_seq">
+		<selectKey keyProperty="car_seq" resultType="int"
+			order="BEFORE">
+			SELECT CAR_SEQ.NEXTVAL FROM DUAL
+		</selectKey>
+		INSERT INTO CAR
+		VALUES(${car_seq}, #{car_num}, #{car_type}, #{oil_type}, #{car_option}, #{zone}, #{rent_amt}, #{drive_amt}, NULL, #{cid},#{car_size})
+	</insert>
+	
+	<insert id="fileInsert" parameterType="HashMap">
+		INSERT INTO CMFILE
+		VALUE(#{cf_num},#{oriFileName}, #{sysFileName}, DEFAULT)
+	</insert>
+	
+	<select id="getCfList" parameterType="Integer"
+		resultType="com.media.dto.CfileDto">
+		SELECT CF_ORINAME,CF_SYSNAME FROM CMFILE
+		WHERE CID=#{cid}
+	</select>
+	
+	
+	<select id="carNumCheck" parameterType="String"
+		resultType="Integer">
+		SELECT COUNT(*) FROM CAR WHERE CAR_NUM=#{car_num}	
+	</select>
+	
+	<update id="carUpdate" parameterType="com.media.dto.CarDto">
+		UPDATE CAR SET
+	</update>
+	
+	<delete id="contentsDelete" parameterType="Integer">
+		DELETE FROM C WHERE
+		CAR_SEQ=#{car_seq}
+	</delete>
+</mapper>

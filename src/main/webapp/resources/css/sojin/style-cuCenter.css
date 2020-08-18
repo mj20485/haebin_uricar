@@ -1,0 +1,65 @@
+.main{
+   margin-top: -10%;
+   margin-bottom: 50px;
+   margin-left: 16.5%;
+}
+.cuCenter-header{
+   color: #004982;
+   font-size: 20pt;
+   margin-left: 15%;
+   margin-bottom: 50px; 
+}
+.list{
+   margin-left: 15%;
+   margin-right: 10%;
+}
+.table{
+   float: left;
+   padding-bottom: 20px;
+   border-bottom: 1px solid #E7E7E7;
+   font-size:10pt;
+   text-align: center;
+   color: #004982;
+   font-weight: bold;
+}
+.t-no{
+   float: left;
+   width: 5%;
+}
+.t-view {
+   float: left;
+   width: 7%;
+}
+.t-title{
+   float: left;
+   width: 30%;
+   text-align: center;
+}
+.t-name {
+   float: left;
+   width: 17%;
+}
+.t-name {
+   float: left;
+   width: 17%;
+}
+
+.data-row{
+   border-bottom: 1px solid #e7e7e7;
+   padding-bottom: 20px;
+   padding-top: 20px;
+   text-align: center;
+}
+.button{
+   float: right;
+   margin-right: 15%;
+   background-color: #004982;
+   color: white;
+   width: 80px;
+   height: 40px;
+   border-radius: 25px;
+   margin-bottom: 20px;
+}
+.paging{
+   color: #004982;
+}

@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+/* 나눔 고딕 */
+@font-face{font-family:'NanumG';src:url("/fonts/NanumGothic.eot");/* ie6, ie9호환성보기*/src:url("/fonts/NanumGothic.eot?#iefix") format('embedded-opentype'),/* ie7,8 */url("/fonts/NanumGothic.woff") format('woff'),/* Crome */url("/fonts/NanumGothic.ttf") format('truetype');}
+
+/* 나눔명조 */
+@font-face{font-family:'NanumMJ';src:url("/fonts/NanumMyeongjo.eot");/* ie6, ie9호환성보기*/src:url("/fonts/NanumMyeongjo.eot?#iefix") format('embedded-opentype'),/* ie7,8 */url("/fonts/NanumMyeongjo.woff") format('woff'),/* Crome */url("/fonts/NanumMyeongjo.ttf") format('truetype');}
+
+#contents_wrap, .contents {
+    /*font-family: NanumG;*/
+    font-size: 14px;
+    line-height: 26px;
+    color : #444;
+}
+
+.contents *{
+    line-height: 26px;
+}
+
+.m2on-note-A {
+    font-size: 11px;
+    color: #7d7d7d;
+    /* clear: both; */
+    line-height: 19px;
+    margin-top: 10px;
+    display: block;
+}
+
+.biz-button-A > a{
+    display: inline-block;
+    background-color: #4990c8;
+    border: 1px solid #3d7dad;
+    border-radius: 3px;
+    padding: 2px 10px;
+    font-weight: 400;
+    margin: 5px;
+    min-width: 158px;
+    text-align: center;
+    font-size: 13px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+
+.biz-button-A > a:link, .biz-button-A > a:visited, .biz-button-A > a:active{
+    color:#fff;
+    text-decoration: none;
+}
+/*
+table.tbl td, .tabcont ul li, .contxt, .contxt a {
+    line-height: 24px;
+}
+
+table.basic tbody td > p, table.basic tbody td dt, table.basic tbody td ul li, .condesc dd, .contxt ul.desclist, table.basic tbody td dd, table.basic tbody td ul li li {
+    line-height: 24px;
+}*/

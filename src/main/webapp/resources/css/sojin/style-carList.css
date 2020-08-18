@@ -1,0 +1,76 @@
+.board-form{
+   margin-top: 5%;
+   margin-bottom: 50px;
+   margin-left: 15%;
+}
+.login-header{
+   color: #004982;
+   font-size: 20pt;
+   margin-left: 15%;
+   margin-bottom: 50px; 
+}
+.data-area{
+   margin-left: 15%;
+   margin-right: 10%;
+}
+.title-row{
+   
+    padding-bottom: 30px;
+    border-bottom: 1px solid #E7E7E7;
+     /*font-size: 10pt;*/
+    text-align: center;
+    color: #004982;
+    font-weight: bold;
+    padding-left: 5%;
+}
+.t-no{
+   float: left;
+   width: 10%;
+}
+
+.t-title{
+   float: left;
+   width: 30%;
+   text-align: center;
+}
+.t-name {
+   float: left;
+   width: 20%;
+}
+.t-date {
+   float: left;
+   width: 20%;
+}
+
+.data-row{
+   border-bottom: 1px solid #e7e7e7;
+   padding-bottom: 20px;
+   padding-top: 20px;
+   text-align: center;
+}
+.button{
+   float: right;
+   margin-right: 15%;
+   background-color: #004982;
+   color: white;
+   width: 80px;
+   height: 40px;
+   border-radius: 25px;
+   margin-bottom: 20px;
+}
+.paging{
+   color: #004982;
+}
+.wr-btn{
+   margin-top: 5%;
+   margin-left: 42%;
+   background-color: #004982;
+   color: white;
+   width: 100px;
+   height: 40px;
+   border-radius: 25px;
+   margin-bottom: 20px;
+}
+.paging{
+   color: #004982;
+}

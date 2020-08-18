@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<mapper namespace="com.media.dao.CmemberDao">
+
+	<select id="getPwd" parameterType="String"
+		resultType="String">
+		SELECT PW FROM CM WHERE CID=#{cid}
+	</select>
+	
+	<select id="getCmemInfo" parameterType="String"
+		resultType="com.media.dto.CmemberDto">
+		SELECT * FROM CMINFO WHERE CID=#{cid}
+	
+	</select>
+	
+	<insert id="cmemberInsert"
+		parameterType="com.media.dto.CmemberDto">
+		INSERT INTO CM
+		VALUES(#{cid},#{cnum},#{pw},#{email},#{ceo},#{address},#{phone},#{cname})
+	</insert>
+	
+	<select id="new_cmpwdUpdate" parameterType="com.media.dto.CmemberDto">
+		UPDATE CM SET pw = #{pw} WHERE CID = #{cid}
+	</select>
+	
+	<select id="new_cmaddressUpdate" parameterType="com.media.dto.CmemberDto">
+		UPDATE CM SET ADDRESS = #{address} WHERE CID = #{cid}
+	</select>
+	
+	<select id="new_cmphoneUpdate" parameterType="com.media.dto.CmemberDto">
+		UPDATE CM SET PHONE = #{phone} WHERE CID = #{cid}
+	</select>
+	
+	<select id="new_cmemailUpdate" parameterType="com.media.dto.CmemberDto">
+		UPDATE CM SET EMAIL = #{email} WHERE CID = #{cid}
+	</select>
+	
+	<insert id="proFileInsert" parameterType="HashMap">
+		INSERT INTO CMFILE
+		VALUES(CMFILE_SEQ.NEXTVAL, #{cp_oriFileName},#{cp_sysFileName}, #{cid}, DEFAULT, DEFAULT)
+	</insert>
+	
+	<select id="getCfList" parameterType="Integer"
+		resultType="com.media.dto.CfileDto">
+		SELECT CP_ORINAME, CF_SYSNAME FROM CMFILE
+		WHERE CID=#{cid}	
+	</select>
+	
+	<select id="getOriName" parameterType="String"
+		resultType="String">
+		SELECT CP_ORINAME FROM CMFILE
+		WHERE CP_SYSNAME=#{sysFileName}
+	</select>
+	
+	<select id="cidCheck" parameterType="String"
+		resultType="Integer">
+		SELECT COUNT(*) FROM CMINFO WHERE CID=#{cid}	
+	</select>
+
+</mapper>

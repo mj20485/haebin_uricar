@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.media.dao.MemberDao">
+	<select id="getMlist" parameterType="HashMap"
+		resultType="com.media.dto.MemberDto">
+		<![CDATA[
+		SELECT * FROM MLIST
+		WHERE RONUM >= (${pageNum}*${cnt})-(${cnt}-1)
+			AND RONUM <= ${pageNum}*${cnt}
+		]]>	
+	</select>
+	
+	<select id="getMemberCount" resultType="Integer">
+		SELECT COUNT(*) FROM MLIST
+	</select>
+
+	<select id="getPassword" parameterType="String"
+		resultType="String">
+		SELECT PASSWORD FROM MM WHERE MID=#{id}	
+	</select>
+	
+	<select id="getMemInfo" parameterType="String"
+		resultType="com.media.dto.MemberDto">
+		SELECT * FROM MM WHERE MID=#{id}
+	</select>
+	
+	<insert id="memberInsert"
+		parameterType="com.media.dto.MemberDto">
+		INSERT INTO MM
+		VALUES(#{mid},#{name},#{phone},#{address},#{license_type},#{license_num},#{license_end},#{license_start},#{birth},#{gender},#{email},DEFAULT,#{password})
+	</insert>
+	
+	<select id="idCheck" parameterType="String"
+		resultType="Integer">
+		SELECT COUNT(*) FROM MM WHERE MID=#{mid}	
+	</select>
+	
+	<select id="findId" parameterType="com.media.dto.MemberDto" resultType="String">
+		SELECT mid FROM MM WHERE NAME=#{name} and birth=#{birth} and phone=#{phone}
+	</select>
+	
+	<select id="new_pwdUpdate" parameterType="com.media.dto.MemberDto">
+		UPDATE M SET password = #{password} WHERE MID = #{mid} 
+	</select>
+	
+	<select id="new_emailUpdate" parameterType="com.media.dto.MemberDto">
+		UPDATE M SET EMAIL = #{email} WHERE MID = #{mid}
+	</select>
+	
+	<select id="new_phoneUpdate" parameterType="com.media.dto.MemberDto">
+		UPDATE M SET PHONE = #{phone} WHERE MID = #{mid}
+	</select>
+	
+	<select id="new_addressUpdate" parameterType="com.media.dto.MemberDto">
+		UPDATE M SET ADDRESS = #{address} WHERE MID = #{mid}
+	</select>
+	
+	<update parameterType="HashMap" id="changepass">
+	update m set password=#{pwcheck} where email=#{email} 
+	</update>
+	
+	<update parameterType="HashMap" id="cmchangepass">
+	update cm set pw=#{pwcheck} where email=#{email} 
+	</update>
+	
+	<delete id="cardDelete" parameterType="String">
+		DELETE FROM CARD WHERE
+		CARD_NUM = #{card_num}
+	</delete>
+</mapper>

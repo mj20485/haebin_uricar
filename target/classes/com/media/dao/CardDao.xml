@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+   PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+   
+<mapper namespace="com.media.dao.CardDao">
+   <select id="getCardInfo" parameterType="String"
+      resultType="com.media.dto.CardDto">
+      SELECT * FROM CARD WHERE MID=#{mid} AND CARD_NUM=#{card_num}
+   </select>
+   
+   <select id="cardInsert" parameterType="com.media.dto.CardDto">
+      INSERT INTO CARD
+      VALUES(#{card_num}, #{card_pw}, #{card_month}, #{card_year}, #{mid},#{card_com},#{card_cvs}, #{mname})
+   </select>
+   
+   <select id="getCardList" parameterType="String" resultType="com.media.dto.CardDto">
+      SELECT * FROM CARD WHERE MID=#{mid}
+   </select>
+</mapper>

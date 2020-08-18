@@ -1,0 +1,50 @@
+.ttt{
+   margin-left: 40%;
+   margin-top: -20%;
+}
+.rFrm{
+   margin-left: 30px;
+   margin-top: 3%;
+}
+#name{
+   margin-bottom: 3%;
+   font-size: 10pt;
+}
+#birth{
+   margin-bottom: 3%;
+   font-size: 10pt;
+}
+#tel{
+   margin-bottom: 3%;
+   font-size: 10pt;
+}
+#findId{
+   border: 1px solid #0   04982;
+   background-color: #004982;
+   color: white;
+   margin-left: 50%;
+   margin-top: 3%;
+   padding: 0.5% 1% 0.5% 1% ;
+
+}
+#cname{
+   margin-bottom: 3%;
+   font-size: 10pt;
+}
+#phone{
+   margin-bottom: 3%;
+   font-size: 10pt;
+}
+#email{
+   margin-bottom: 3%;
+   font-size: 10pt;
+}
+#cmfindId{
+   border: 1px solid #0   04982;
+   background-color: #004982;
+   color: white;
+   margin-left: 50%;
+   margin-top: 3%;
+   padding: 0.5% 1% 0.5% 1% ;
+
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.media.dao.RentDao">
+	<select id="getRcList" parameterType="HashMap"
+		resultType="com.media.dto.CarDto">
+		<![CDATA[
+		SELECT * FROM CLIST_1
+		WHERE RONUM >= (${pageNum}*${cnt})-(${cnt}-1)
+			AND RONUM <= ${pageNum}*${cnt}
+		]]>
+
+	</select>
+	
+	<select id="getRclist" parameterType="HashMap"
+		resultType="com.media.dto.CarDto">
+		<![CDATA[
+		SELECT * FROM CLIST_1
+		WHERE RONUM >= (${pageNum}*${cnt})-(${cnt}-1)
+			AND RONUM <= ${pageNum}*${cnt}
+		]]>
+
+	</select>
+
+	<select id="getRcarCount" resultType="Integer">
+		SELECT COUNT(*) FROM
+		CLIST_1
+	</select>
+
+	<select id="getRcarContents" parameterType="String"
+		resultType="com.media.dto.CarDto">
+		SELECT * FROM CLIST_1
+		WHERE CAR_NUM = #{car_num}
+	</select>
+	
+	<select id="getTypeList" parameterType="String" resultType="com.media.dto.CarDto">
+		SELECT * FROM CLIST_1
+		WHERE ZONE=#{zone}
+	</select>
+	
+</mapper>

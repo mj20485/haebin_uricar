@@ -1,0 +1,181 @@
+html {
+   height: 100%;
+}
+
+header {
+   height: 130px;
+   border-bottom: 1px solid #004982;
+   /* margin : auto;
+   margin-left:5px;
+   margin-right: 5px;*/
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   height: 150px;
+   background-size: cover;
+}
+
+section {
+   margin-top: 10px;
+   margin-bottom: 50px;
+   margin: auto;
+}
+
+/*logo*/
+.logo {
+   paddig: 0px;
+   margin: 0px;
+}
+
+.top-bar a {
+   text-decoration: none;
+   text-align: center;
+   color: #000000;
+}
+
+.top-left-logo {
+   margin-left: 300px;
+   margin-bottom: 40px;
+   margin-top: 0px;
+}
+
+.top-left {
+   float: left;
+   position: relative; /*나중에 지울까*/
+   margin-left: 110px;
+   margin-right: 30px;
+}
+
+.top-left>ul>li {
+   list-style: none;
+   padding-left: 0px;
+   float: left;
+   /*margin:auto;*/
+   margin-top: 35px;
+   margin-left: 70px;
+   font-weight: bold;
+   font-size: 17pt;
+}
+
+.top-left ul li a:visited {
+   text-decoration: none;
+   color: #000000;
+}
+
+.top-left ul li a {
+   text-decoration: none;
+   color: #000000;
+}
+
+.top-left ul li a:hover {
+   color: #004982;
+}
+
+ul.tq {
+   list-style-type: none;
+   margin: 0;
+   overflow: hidden;
+}
+
+.submenu {
+   display: none;
+   position: absolute;
+   background-color: #f9f9f9;
+   width: 170px;
+   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+   /*z-index: 1;*/
+   top: 64px;
+   margin-top: -1px;
+   font-size: 15px;
+}
+
+.sodog:hover .submenu {
+   display: block;
+}
+
+.submenu a {
+   color: black;
+  padding-top:5px;
+  padding-left:0px;
+   padding-right: 16px;
+   text-decoration: none;
+   display: block;
+   height: 40px;
+   line-height: 20px;
+   text-align: left;
+}
+
+.submenu a:hover {
+   background-color: #f1f1f1;
+}
+
+div.right {
+   float: right;
+   color: #004982;
+   width: 300px;
+   margin-top: 20px;
+   margin-right: 60px;
+}
+
+.top-right ul {
+   width: 300px;
+}
+
+.top-right ul li {
+   list-style: none;
+   padding-left: 0px;
+   float: right;
+   margin-left: 13px;
+}
+
+.top-right ul li a:visited {
+   text-decoration: none;
+   color: #004982;
+}
+
+.top-right ul li a:hover {
+   color: #004982;
+}
+
+.suc {
+   display: none;
+}
+
+.bef {
+   display: block;
+}
+
+.mp4 {
+   margin: auto;
+}
+
+/*이거는 예약 바로가기 그거창*/
+.exreserv {
+   width: 100%;
+   text-align: center;
+   margin: auto;
+   padding-top: 30px;
+   padding-bottom: 30px;
+
+   /*padding-left: 40px;
+   padding-right: 40px;
+   /*margin-bottom: 50px;*/
+}
+
+.goreserv {
+   text-decoration: none;
+   text-align: center;
+   width: 20%;
+   height: 30%;
+   border: 1px solid #004982;
+   color: white;
+   background-color: #004982;
+   margin: auto;
+}
+
+.goreserv a {
+   text-decoration: none;
+   color: white;
+}

@@ -1,0 +1,63 @@
+.content{
+   margin-top: 100px;
+   margin-left: 15%;
+   margin-bottom: 50px;
+}
+.login-header{
+   color: #004982;
+   font-size: 30px;
+   margin-left: 0;
+   margin-bottom: 50px; 
+}
+.write-input{
+   float:left;
+   width: 600px;
+   margin-right: 20px;
+   
+}
+.category{
+   float:left;
+   width: 200px;
+}
+.write-text{
+   width: 1000px;
+    height: 300px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.filebox{
+   margin-top: 10%;
+   margin-bottom: 30px;
+}
+.btn-area{
+   border: none;
+   margin-bottom: 8.147%;
+}
+.btn-write{
+   float: right;
+   clear:inherit;9
+   margin-right: 26.138%;
+   background-color: #004982;
+   color: white;
+   margin-left: 10px;
+}
+.btn-write1{
+   float: right;
+   clear:inherit;
+   background-color: #004982;
+   color: white;
+   margin-left: 10px;
+}
+.btn-write2{
+   float: right;
+   
+   clear:inherit;
+   background-color: #004982;
+   color: white;
+}
+.btn-area{
+   margin-top: 7%;
+   margin-right:50%;
+   margin-bottom: 10%;
+}
